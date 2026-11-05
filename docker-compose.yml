@@ -12,9 +12,9 @@ services:
     container_name: cloud_db
     environment:
       MARIADB_DATABASE: cloud
-      MARIA_USER: cloud_user
-      MARIA_PASSWORD: cloud_pass
-      MARIA_ROOT_PASSWORD: root_pass
+      MARIADB_USER: cloud_user
+      MARIADB_PASSWORD: cloud_pass
+      MARIADB_ROOT_PASSWORD: root_pass
     networks:
       - cloud_db_net
 networks:
@@ -22,3 +22,4 @@ networks:
     driver: bridge
   cloud_db_net:
     driver: bridge
+
