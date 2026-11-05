@@ -10,13 +10,15 @@ jobs:
   validar:
     runs-on: ubuntu-lastest
     steps:
-      - name: Preparar repositorio
+      - name: "Preparar repositorio"
         uses: actions/checkout@v4
-      - name: "Paso 1 estructura de carpeta"
+
+      - name: "PASO 1 Estructura de carpetas"
         run: |
           test -d app
           test -f app/index.php
           test -f Dockerfile
           test -f docker-compose.yml
+      
       - name: "construccion"
-        run: docker compose build
+        run:  docker compose build
